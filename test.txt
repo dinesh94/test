@@ -10,7 +10,6 @@ dinesh94 is pushing the file first.
 Changes by Dinesh6101
 Change by Dinesh94
 
-Notes :-
 
 git clone
 Once you done with changes 
@@ -21,7 +20,12 @@ git status - Show status with remote
 git push - once you are ready to move local changes to remote
 
 GIT MERGE COMMAND LINE
-git pull will disturb your files which is conflicted
+1. git pull will disturb your files which is conflicted
+2. Resolve the conflicts 
+3. git add or git commit -a or git commit -i <files> or git commit -i -m 'merge message'
+	this way you can merge whole set of files.
+4. git commit (if not committed)
+https://help.github.com/articles/resolving-a-merge-conflict-from-the-command-line/
 
 GIT MERGE/PULL USING GIT-GUI
 For pull - You need to go to 

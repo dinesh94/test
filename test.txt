@@ -7,7 +7,8 @@ dinesh6101 is also changing test file.
 dinesh94 is changing test file.
 dinesh94 is pushing the file first.
 
-Chnages by Dinesh6101
+Changes by Dinesh6101
+Change by Dinesh94
 
 Notes :-
 
@@ -19,10 +20,12 @@ git log - Show logs with local
 git status - Show status with remote
 git push - once you are ready to move local changes to remote
 
-if you are using git-gui
+GIT MERGE COMMAND LINE
+git pull will disturb your files which is conflicted
+
+GIT MERGE/PULL USING GIT-GUI
 For pull - You need to go to 
 1. remote -> fetch
 2. Then you need to do merge, Merge -> Local Merge
 3. Then commit merged file, Commit -> Stage to commit
 4. Then you need to push your changes to remote 
-This way the merge will work

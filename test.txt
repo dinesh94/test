@@ -4,4 +4,4 @@ Trying some more commands
 Trying git UI this time
 Git Pull from UI ?
 dinesh94 is changing test file.
-dinesh94 is pusshing the file first.
+dinesh94 is pushing the file first.

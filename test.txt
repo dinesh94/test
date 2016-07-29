@@ -2,4 +2,5 @@ A first commit
 Let me change in the same file & try to pull
 Trying some more commands
 Trying git UI this time
-Does UI Shows remote changes ?
+Git Pull from UI ?
+dinesh94 is changing test file.

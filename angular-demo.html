@@ -35,12 +35,14 @@
                 <th>Last Name</th>
                 <th>Email</th>
                 <th>Actions</th>
+				<th>Roll No</th>
             </tr>
  			
             <tr ng-repeat="employee in employees">
                 <td>{{ employee.firstName }}</td>
                 <td>{{ employee.lastName }}</td>
                 <td>{{ employee.email }}</td>
+				<td>{{ employee.rollno }}</td>
                 <td><a ng-click="editEmployee( employee )" class="button">Edit</a> | <a ng-click="removeEmployee( employee )" class="button">Remove</a></td>
             </tr>
  
@@ -61,6 +63,10 @@
                 <tr>
                     <td>Email</td>
                     <td><input type="text" ng-model="form.email" size="60" /></td>
+                </tr>
+				<tr>
+                    <td>Roll No</td>
+                    <td><input type="text" ng-model="form.rollno" size="60" /></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="Submit" /></td>

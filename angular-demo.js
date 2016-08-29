@@ -9,7 +9,8 @@ app.controller("UserManagementController", function($scope, $http) {
 	$scope.form = {
 		firstName : "",
 		lastName : "",
-		email : ""
+		email : "",
+		rollno:""
 	};
 
 	// HTTP POST/PUT methods for add/edit employee
@@ -51,6 +52,7 @@ app.controller("UserManagementController", function($scope, $http) {
 		$scope.form.lastName = employee.lastName;
 		$scope.form.email = employee.email;
 		$scope.form._id = employee._id;
+		$scope.form.rollno = employee.rollno;
 	};
 
 	/* Private Methods */
@@ -82,6 +84,7 @@ app.controller("UserManagementController", function($scope, $http) {
 		$scope.form.lastName = "";
 		$scope.form.email = "";
 		$scope.form._id = -1;
+		$scope.form.rollno = "";
 	}
 	
 

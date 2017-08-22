@@ -1,0 +1,5 @@
+server:
+  contextPath: /comment-service
+application:
+  root-log-level: INFO
+  app-log-level: INFO

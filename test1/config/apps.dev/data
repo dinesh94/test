@@ -1,0 +1,84 @@
+tomcat:
+  ajp:
+    enabled: false
+    port: 8009
+    protocol: AJP/1.3
+    redirectPort: 8443
+    acceptorThreadCount: 1
+    maxThreads: 400
+    acceptCount: 200
+    minSpareThreads: 20
+security:
+  user:
+  ignored: /unauthorized,/unavailable,/ping
+spring:
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  sysCommDatasource:
+    url: jdbc:mysql://localhost:3306/system?zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true
+    username: root
+    password: root
+    driverClassName: com.mysql.jdbc.Driver
+    max-wait: 10000
+    max-active: 50
+    test-on-borrow: true
+    validation-query: select 1
+jdbc:
+  lookupSchemaDs:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/system?zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true
+    driverClassName: com.mysql.jdbc.Driver
+    max-wait: 10000
+    max-active: 50
+    test-on-borrow: true
+    validation-query: select 1
+  aggDatasource:
+    url: jdbc:mysql://localhost:3306/aggregation?zeroDateTimeBehavior=convertToNull&amp;autoReconnect=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    max-wait: 10000
+    max-active: 50
+    test-on-borrow: true
+    validation-query: select 1
+application:
+  memcached:
+    address: localhost:11211
+  domain-pattern: localhost
+  inactiveLoginExpirationTime: 3600
+  symphonyServiceHost: http://localhost:8080/Symphony
+  symphonyCallerKey: 884455QDRE57832
+  basicAuthUserReloadURL: /rest/load_basic_auth_user
+  basicAuthUsersBucket: BASIC_AUTH_USERS
+micro-services:
+  host: http://127.0.0.1
+  services:
+    messaging-service:
+      context: /messaging-service
+      end-points:
+        messages: /messages
+        message: /messages/{id}
+        sendMessage: /send_message
+        sendMessage-v2: /send_message
+    client-service:
+      context: /client-service
+      end-points:
+        client: /clients/{clientId}
+    comment-service:
+      context: /comment-service
+      end-points:
+        comments: /clients/{clientId}/sites/{siteId}/comments
+        deviceListComments: /clients/{clientId}/sites/{siteId}/deviceListComments
+        saveComments: /clients/{clientId}/sites/{siteId}/savecomment
+        recentcommentcontainshashtag: /clients/{clientId}/sites/{siteId}/recentcommentcontainshashtag
+        recentdevicecommentcontainshashtag: /clients/{clientId}/sites/{siteId}/recentcommentcontainshashtag/{deviceKey}
+    maintenance-service:
+      context: /maintenance-service
+      end-points:
+        avgruntimes: /clients/{clientId}/sites/{siteId}/avgruntimes
+        avgruntimesOfHvac: /clients/{clientId}/sites/{siteId}/avgruntimes/{hvacKey}
+        runtimesincepm: /clients/{clientId}/sites/{siteId}/runtimesincepm
+        runtimesincepmOfHvac: /clients/{clientId}/sites/{siteId}/runtimesincepm/{hvacKey}

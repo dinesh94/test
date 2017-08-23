@@ -1,0 +1,6 @@
+server:
+  contextPath: /operations-web
+application:
+  some-value: Now INFO+INFO
+  root-log-level: INFO
+  app-log-level: INFO

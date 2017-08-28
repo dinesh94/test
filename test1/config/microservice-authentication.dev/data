@@ -1,0 +1,6 @@
+server:
+  contextPath: /authentication-service
+  port: ${port:8087}
+application:
+  root-log-level: INFO
+  app-log-level: DEBUG

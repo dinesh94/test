@@ -49,6 +49,7 @@ application:
     address: localhost:11211
   domain-pattern: localhost
   inactiveLoginExpirationTime: 3600
+  maxLoginAge: 86400
   symphonyServiceHost: http://localhost:8080/Symphony
   symphonyCallerKey: 884455QDRE57832
   basicAuthUserReloadURL: /rest/load_basic_auth_user
